@@ -269,10 +269,11 @@ abstract class cGenericOrdersConverter extends cOrdersConverter {
     $vars = array('%product' => $offer->name, '%offer'=> (string)$offer);
     $priceType = NULL;
     $currency = $price = NULL;
+    $price = NULL;
     foreach ($offer->prices as $priceTypeId => $priceItem ) {
       $priceType = &$priceTypes[$priceTypeId];
       $vars['%priceType'] = $priceType['name'];
-      if ( !$priceType['tax'] ) {
+      if ( !$priceType['tax'] && $priceType['name'] == 'Розничная' ) {
         $price = $priceItem['price'];
         $currency = $priceItem['currency'];
         break;
