@@ -112,6 +112,7 @@ class cPriceOffer extends cXMLReaderIdNameItem {
   
   public function end() {
     $this->converter->onOffer($this);
+    $this->reset();
     parent::end();
   }
   

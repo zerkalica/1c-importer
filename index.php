@@ -71,15 +71,15 @@ $installer = new cConverterInstaller();
 $installer->installAction();
 $converterDriverFactory = new cConverterDriver(); 
 
-$importFile = $br . 'import.xml';
-$classificatorConverter = $converterDriverFactory->getClassificator($drvName);
-$productConverter = $converterDriverFactory->getProduct($drvName);
+#$importFile = $br . 'import.xml';
+#$classificatorConverter = $converterDriverFactory->getClassificator($drvName);
+#$productConverter = $converterDriverFactory->getProduct($drvName);
 
-$importParser = new cCommerceImportController($importFile, $classificatorConverter, $productConverter);
-$importParser->run();
+#$importParser = new cCommerceImportController($importFile, $classificatorConverter, $productConverter);
+#$importParser->run();
 
 
-$ordersFile = $br . 'offers.xml';
+$ordersFile = $br . 'offers2.xml';
 $orderConverter = $converterDriverFactory->getOrders($drvName);
 $orderParser = new cCommerceOrdersController($ordersFile, $orderConverter);
 $orderParser->run();

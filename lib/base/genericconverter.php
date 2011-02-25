@@ -269,23 +269,20 @@ abstract class cGenericOrdersConverter extends cOrdersConverter {
     $vars = array('%product' => $offer->name, '%offer'=> (string)$offer);
     $priceType = NULL;
     $currency = $price = NULL;
-    $price = NULL;
-    foreach ($offer->prices as $priceTypeId => $priceItem ) {
-      $priceType = &$priceTypes[$priceTypeId];
-      $vars['%priceType'] = $priceType['name'];
-      if ( !$priceType['tax'] && $priceType['name'] == 'Розничная' ) {
-        $price = $priceItem['price'];
-        $currency = $priceItem['currency'];
-        break;
-      }
+    $price = 0;
+    if ($offer->prices) {
+        foreach ($offer->prices as $priceTypeId => $priceItem ) {
+          $priceType = &$priceTypes[$priceTypeId];
+          $vars['%priceType'] = $priceType['name'];
+          if ( !$priceType['tax'] && $priceType['name'] == 'Розничная' ) {
+            $price = $priceItem['price'];
+            $currency = $priceItem['currency'];
+            break;
+          }
+        }
     }
     $vars['%priceCurrency'] = $currency;
 
-    if ( $price === NULL ) {
-      cLog::Error(cT::t('Ошибка импорта %product: Розничная цена не указана', $vars));
-      return;
-    }
-    
     $vars['%price'] = $price;
     $internalId = $this->mapId($offer->id);
     $ok = FALSE;
