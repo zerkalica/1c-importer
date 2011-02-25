@@ -1,6 +1,0 @@
-Log started cLog at Fri, 25 Feb 2011 23:38:18 +0300 / http://magaz/1c_importer/
-User notice: Старт импортирования cDrupal5OrdersConverter: Fri, 25 Feb 2011 23:38:18 +0300 in /home/nexor/projects/www/magaz/1c_importer/lib/base/converter.php on line 42
-User notice: Обновлено цен у товаров: 2 in /home/nexor/projects/www/magaz/1c_importer/lib/base/genericconverter.php on line 304
-User notice: Всего обработано товаров: 2 in /home/nexor/projects/www/magaz/1c_importer/lib/base/genericconverter.php on line 305
-User notice: Конец импортирования cDrupal5OrdersConverter: Fri, 25 Feb 2011 23:38:19 +0300 in /home/nexor/projects/www/magaz/1c_importer/lib/base/converter.php on line 63
-Log ended cLog at Fri, 25 Feb 2011 23:38:19 +0300

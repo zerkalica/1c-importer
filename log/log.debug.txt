@@ -1,4 +1,0 @@
-Log started cLog at Fri, 25 Feb 2011 23:38:18 +0300 / http://magaz/1c_importer/
-Debug: Обновлена цена для товара WinRAR : Standard License GOV,   (1 copy): 24.65, тип цены: Розничная, валюта: USD in /home/nexor/projects/www/magaz/1c_importer/lib/base/genericconverter.php on line 296
-Debug: Обновлена цена для товара WinRAR : Standard License GOV,   (2-9 copies): 0, тип цены: 0Type, валюта:  in /home/nexor/projects/www/magaz/1c_importer/lib/base/genericconverter.php on line 296
-Log ended cLog at Fri, 25 Feb 2011 23:38:19 +0300
